@@ -86,7 +86,7 @@ const deleteDiary = async (req, res) => {
     }
 };
 
-module.exports = {
+export {
     createDiary,
     getDiaryById,
     updateDiary,
