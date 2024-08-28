@@ -89,7 +89,7 @@ const editUser = async (req, res) => {
       return res.status(404).json({ message: 'User not found' });
     }
 
-    const hashed_password = await bcrypt.hash(user_password, 10);
+    const hashed_password =  bcrypt.hash(user_password);
 
     const updatedUser = await db.user.update({
       where: {
